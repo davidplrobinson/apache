@@ -1,0 +1,56 @@
+/**
+ * @provides phabricator-filetree-view-css
+ */
+
+.phabricator-filetree {
+  padding: 4px 0;
+}
+
+/* NOTE: Until the whole side nav situation gets cleaned up, we need to be
+   highly specific in specifying selectors here, to override side nav styles.
+*/
+
+.phabricator-filetree .phabricator-filetree-item {
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-left: 4px solid transparent;
+}
+
+.phabricator-filetree span.phabricator-filetree-icon {
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  width: 16px;
+  height: 20px;
+  padding: 0;
+  float: left;
+}
+
+.phabricator-filetree span.phabricator-filetree-name {
+  padding: 0;
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.phabricator-filetree span.phabricator-filetree-item
+  .phabricator-filetree-name {
+  color: {$darkbluetext};
+}
+
+.phabricator-filetree a.phabricator-filetree-item
+  .phabricator-filetree-name {
+  color: {$darkbluetext};
+}
+
+.phabricator-filetree a.phabricator-filetree-item:hover {
+  text-decoration: none;
+  background-color: {$hovergrey};
+}
+
+.phabricator-filetree .phabricator-active-nav-focus {
+  background-color: {$hovergrey};
+  border-left: 4px solid {$sky};
+}
