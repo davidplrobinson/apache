@@ -1,0 +1,6 @@
+{
+  "mysql.port": "3306",
+  "mysql.host": "change_these_details_in",
+  "mysql.user": "phabricator_conf_local.json",
+  "mysql.pass": ""
+}
