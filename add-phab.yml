@@ -1,0 +1,6 @@
+version: '2'
+services:
+ apache:
+   volumes:
+     - ./phab/var/www:/var/www
+     - ./phab/etc/apache2/sites-available:/etc/apache2/sites-available
