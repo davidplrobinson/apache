@@ -10,6 +10,6 @@ services:
    image: mysql/mysql-server:5.7
    container_name: mysql
    environment:
-      MY_SQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
    ports:
       - 3306
