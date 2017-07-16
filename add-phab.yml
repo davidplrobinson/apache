@@ -5,8 +5,8 @@ services:
      - ./phab/var/www:/var/www
      - ./phab/etc/apache2/sites-available:/etc/apache2/sites-available
  mysql:
-   from: mysql/mysql-server:5.7
-   name: mysql
+   image: mysql/mysql-server:5.7
+   container_name: mysql
    environment:
       MY_SQL_ROOT_PASSWORD: password
    ports:
