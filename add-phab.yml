@@ -1,6 +1,8 @@
 version: '2'
 services:
  apache:
+   links:
+     - mysql
    volumes:
      - ./phab/var/www:/var/www
      - ./phab/etc/apache2/sites-available:/etc/apache2/sites-available
