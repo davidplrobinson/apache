@@ -1,15 +1,19 @@
 version: '2'
 services:
  apache:
-   links:
+   depends_on:
      - mysql
+   links:
+     - mysql:mysql
    volumes:
      - ./phab/var/www:/var/www
      - ./phab/etc/apache2/sites-available:/etc/apache2/sites-available
  mysql:
    image: mysql/mysql-server:5.7
    container_name: mysql
+   volumes:
+     - ./phab/mysql_db:/var/lib/mysql
    environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: "password"
    ports:
       - 3306:3306
