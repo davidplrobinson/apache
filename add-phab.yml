@@ -11,6 +11,7 @@ services:
  mysql:
    image: mysql/mysql-server:5.7
    container_name: mysql
+   restart: always
    volumes:
      - ./phab/mysql_db:/var/lib/mysql
    environment:
